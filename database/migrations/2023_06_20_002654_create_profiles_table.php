@@ -20,6 +20,8 @@ return new class extends Migration
             $table->longText('bio')->nullable();
             $table->text('country')->nullable();
             $table->text('city')->nullable();
+            $table->boolean('has_profile_photo');
+            $table->longText('profile_photo_path')->nullable();
             $table->timestamps();
         });
     }

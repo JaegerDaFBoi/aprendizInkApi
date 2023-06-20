@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained(
                 table: 'users', indexName: 'profile_user_id'
-            );
+            )->cascadeOnUpdate()->cascadeOnDelete();
             $table->date('birthdate')->nullable();
             $table->longText('bio')->nullable();
             $table->text('country')->nullable();
